@@ -14,7 +14,7 @@ export const getAll = async (req,res)=> {
     .catch(err => res.json(err))
 }
 export const getOne = async (req,res)=> {
-    await knexConn.select().table('book').where('id',req.params.bookid)
+    await knexConn.select().table('book').where('email',req.params.bookid)
     .then(data => res.json(data))
     .catch(err => res.json(err))
 }
